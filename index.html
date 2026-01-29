@@ -35,6 +35,35 @@
       font-weight: bold;
       border-radius: 30px;
     }
+    .button2{
+  margin-top:12px;
+  background:#ffcc00;
+}
+
+#boom{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  display:none;
+  overflow:hidden;
+}
+
+.boom-dot{
+  position:absolute;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:white;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  animation:pop 520ms ease-out forwards;
+}
+
+@keyframes pop{
+  0%{transform:translate(-50%,-50%) scale(0.5); opacity:1;}
+  100%{transform:translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(2.5); opacity:0;}
+}
   </style>
 </head>
 <body>
@@ -51,5 +80,31 @@
       </a> 
     </div>
   </div>
+  <div id="boom"></div>
+
+<script>
+  const btn = document.getElementById("jelliesBtn");
+  const boom = document.getElementById("boom");
+
+  function explodeThenGo(){
+    boom.style.display = "block";
+    boom.innerHTML = "";
+
+    // Create explosion dots
+    for(let i=0;i<18;i++){
+      const dot = document.createElement("div");
+      dot.className = "boom-dot";
+      const angle = (Math.PI * 2) * (i/18);
+      const dist = 180 + Math.random()*140;
+      dot.style.setProperty("--dx", Math.cos(angle)*dist + "px");
+      dot.style.setProperty("--dy", Math.sin(angle)*dist + "px");
+      boom.appendChild(dot);
+    }
+
+    setTimeout(()=>{ window.location.href = "jellies.html"; }, 520);
+  }
+
+  btn.addEventListener("click", explodeThenGo);
+</script>
 </body>
 </html>
