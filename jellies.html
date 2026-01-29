@@ -1,64 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Jellies | Funky Sweets</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-  body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#ff0080,#ffcc00);
-    color:white;
-    text-align:center;
-  }
-  h1{ margin-top:30px; }
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-    padding:20px;
-    max-width:900px;
-    margin:auto;
-  }
-  .item{
-    background: rgba(0,0,0,0.35);
-    padding:20px;
-    border-radius:15px;
-    font-weight:bold;
-  }
-  .button{
-    display:inline-block;
-    margin:25px auto 40px;
-    padding:14px 26px;
-    background:#00ffcc;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Jellies | Funky Sweets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ff0080,#ffcc00);color:white;text-align:center;}
+    .container{padding:40px 20px;}
+    h1{font-size:2.2em;margin:0 0 10px;}
+    .card{background:rgba(0,0,0,0.35);padding:20px;border-radius:15px;margin:20px auto;max-width:900px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:15px;}
+    .item{background:rgba(255,255,255,0.12);padding:16px;border-radius:14px;font-weight:bold;}
+    .button{display:inline-block;margin-top:15px;padding:12px 20px;background:#00ffcc;color:black;text-decoration:none;font-weight:bold;border-radius:30px;}
+    .back{display:inline-block;margin-top:18px;color:white;opacity:0.9;text-decoration:underline;}
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <h1>🍬 Jellies</h1>
 
-<h1>🍬 Jelly Range 🍬</h1>
+    <div class="card">
+      <p>Wholesale bulk sweets supplier</p>
+      <p>📦 Dealers • Tuck Shops • Events</p>
 
-<div class="grid">
-  <div class="item">Gummy Bears</div>
-  <div class="item">Sour Worms</div>
-  <div class="item">Jelly Beans</div>
-  <div class="item">Fruit Rings</div>
-  <div class="item">Marshmallows</div>
-  <div class="item">Assorted Mix</div>
-</div>
+      <div class="grid">
+        <div class="item">Gummy Bears</div>
+        <div class="item">Sour Worms</div>
+        <div class="item">Sour Belts</div>
+        <div class="item">Jelly Beans</div>
+        <div class="item">Fruit Rings</div>
+        <div class="item">Marshmallows</div>
+        <div class="item">Assorted Mix</div>
+        <div class="item">Other</div>
+      </div>
 
-<a class="button"
-   href="https://wa.me/264812990777?text=Hi%20Funky%20Sweets!%20I%20want%20to%20order%20JELLIES.%20Please%20send%20your%20full%20jelly%20price%20list."
-   target="_blank" rel="noopener">
-Order Jellies on WhatsApp
-</a>
-
+      <a class="button" href="https://wa.me/264812990777?text=Hi%20Funky%20Sweets!%20I%20want%20to%20order%20JELLIES.%20Please%20send%20your%20full%20jelly%20price%20list."
+         target="_blank" rel="noopener">Order Jellies on WhatsApp</a>
+      <br>
+      <a class="back" href="index.html">Back to home</a>
+    </div>
+  </div>
 </body>
 </html>
